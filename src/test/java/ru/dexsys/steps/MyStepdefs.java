@@ -17,6 +17,7 @@ public class MyStepdefs {
                        "{\"reason\":\"Bad credentials\"}"));
     }
 
+
     @Когда("^Пользователь создает новый заказ$")
     public void пользовательСоздаетНовыйЗаказ() {
        Assert.assertNotNull("Новый заказ не создан. Произошла ошибка", restfulBookerMethods.createBooking());
