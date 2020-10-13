@@ -13,7 +13,6 @@ public class MyStepdefs {
     @Дано("^Пользователь авторизуется с логином '(.*)' и паролем '(.*)'$")
     public void пользовательАвторизуетсяСЛогиномUsernameИПаролемPassword(String userName, String password) {
         Assert.assertFalse("Ошибка авторизации. Токен не получен",
-
                restfulBookerMethods.createToken(userName,password).contains("" +
                        "{\"reason\":\"Bad credentials\"}"));
     }
